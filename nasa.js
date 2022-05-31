@@ -37,6 +37,11 @@ request.send();
 
 var myHeaders = new Headers();
 myHeaders.append("x-api-key", "DEMO_KEY");
+myHeaders.append("OPTIONS", "HTTP/1.1 200 OK");
+myHeaders.append("x-api-key", "DEMO_KEY");
+myHeaders.append('Acces-Control-Allow-Origin', 'https://api.nasa.gov/planetary/apod');
+myHeaders.append('Access-Control-Allow-Methods', "DELETE, POST, PUT, GET, OPTIONS");
+myHeaders.append("Access-Control-Allow-Headers", "Authorization, DNT, User-Agent, Keep-Alive, Content-Type, Accept, Origin, X-Requested-With");
 
 var requestOptions = {
   method: 'GET',
